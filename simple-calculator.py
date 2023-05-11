@@ -24,8 +24,13 @@ def simple_calculator():
             print("Answer: " + str(float(result)))
         # If division
         elif operation == "/":
-            result = integer_1 / integer_2
-            print("Answer: " + str(float(result))) 
+            try:
+                result = integer_1 / integer_2
+                print("Answer: " + str(float(result)))  
+            except ZeroDivisionError:
+                print("Error: Cannot divide by zero")
+                print("Try Again")
+                return 
         # Ask user if they want to continue in solving
         solve_again = input("Do you want to solve again? (y/n): ")
         # If yes, continue solving
