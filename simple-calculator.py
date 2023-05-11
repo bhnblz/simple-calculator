@@ -30,7 +30,11 @@ def simple_calculator():
             except ZeroDivisionError:
                 print("Error: Cannot divide by zero")
                 print("Try Again")
-                return 
+                return
+        # If invalid operation
+        else:
+            result = "Invalid Operation"
+            print(f"Result: {result}")
         # Ask user if they want to continue in solving
         solve_again = input("Do you want to solve again? (y/n): ")
         # If yes, continue solving
