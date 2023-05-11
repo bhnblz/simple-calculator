@@ -1,4 +1,5 @@
 def simple_calculator():
+    print("\n")
     while True:
         # Ask the user for the operation
         operation = input("What operation do you want to perform? (+, -, *, /): ")
@@ -7,8 +8,8 @@ def simple_calculator():
             integer_1 = float(input("Enter first number: "))
             integer_2 = float(input("Enter second number: "))
         except ValueError:
-            print("Error: Invalid number input")
-            print("Try Again!")
+            print("\nError: Invalid number input")
+            print("\nTry Again!")
             return
         # If addition
         if operation == "+":
@@ -28,15 +29,16 @@ def simple_calculator():
                 result = integer_1 / integer_2
                 print("Answer: " + str(float(result)))  
             except ZeroDivisionError:
-                print("Error: Cannot divide by zero")
-                print("Try Again")
+                print("\nError: Cannot divide by zero")
+                print("\nTry Again")
                 return
         # If invalid operation
         else:
             result = "Invalid Operation"
             print(f"Result: {result}")
+
         # Ask user if they want to continue in solving
-        solve_again = input("Do you want to solve again? (y/n): ")
+        solve_again = input("\nDo you want to solve again? (y/n): ")
         # If yes, continue solving
         if solve_again == "y":
             simple_calculator() 
@@ -44,5 +46,6 @@ def simple_calculator():
         elif solve_again == "n":
             print("Thank you! See you later.")
             exit()
+
 # Call the function
 simple_calculator()
