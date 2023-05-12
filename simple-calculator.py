@@ -15,17 +15,16 @@ print(Fore.LIGHTYELLOW_EX + description.center(30))
 description_2 = "to perform depending on the user's desire, such as addition, subtraction, multiplication, and division."
 print(description_2.center(30))
 print("\n")
-introduction = "My name is Bhea and here's my simple calculator python program."
+introduction = "My name is Bhea and Welcome to my Calculator!"
 print(Fore.LIGHTGREEN_EX + introduction.center(30))
 
 def simple_calculator():
     print("\n")
-   
     # Ask the user for the operation
     operation = input(Fore.LIGHTWHITE_EX + "What operation do you want to perform? (+, -, *, /): ")
     # Ask the user to input two numbers
     try:
-        integer_1 = float(input(Fore.LIGHTCYAN_EX + "Enter first number: "))
+        integer_1 = float(input(Fore.LIGHTCYAN_EX + "\nEnter first number: "))
         integer_2 = float(input(Fore.LIGHTCYAN_EX + "Enter second number: "))
     except ValueError:
         print(Fore.LIGHTRED_EX + "\nError: Invalid number input")
@@ -34,20 +33,20 @@ def simple_calculator():
     # If addition
     if operation == "+":
         result = integer_1 + integer_2
-        print("Answer: " + str(float(result)))
+        print("\nAnswer: " + str(float(result)))
     # If subtraction
     elif operation == "-":
         result = integer_1 - integer_2
-        print("Answer: " + str(float(result)))
+        print("\nAnswer: " + str(float(result)))
     # If multiplication
     elif operation == "*":
         result = integer_1 * integer_2
-        print("Answer: " + str(float(result)))
+        print("\nAnswer: " + str(float(result)))
     # If division
     elif operation == "/":
         try:
             result = integer_1 / integer_2
-            print("Answer: " + str(float(result)))  
+            print("\nAnswer: " + str(float(result)))  
         except ZeroDivisionError:
             print(Fore.LIGHTRED_EX + "\nError: Cannot divide by zero")
             print(Fore.LIGHTRED_EX + "\nTry Again")
@@ -59,14 +58,14 @@ def simple_calculator():
         print("\nTry Again")
 
     # Ask user if they want to continue in solving
-    solve_again = input("Do you want to solve again? (y/n): ")
+    solve_again = input(Fore.LIGHTMAGENTA_EX + "\nDo you want to solve again? (y/n): ")
     # If yes, continue solving
     if solve_again == "y":
         simple_calculator()    
     # If no, exit the program
     elif solve_again == "n":
         display = "\nThank you!"
-        print(Fore.LIGHTMAGENTA_EX + display)
+        print(Fore.BLUE + display)
         exit()
 
 # Using while loop
