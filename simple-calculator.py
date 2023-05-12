@@ -19,15 +19,16 @@ introduction = "My name is Bhea and Welcome to my Calculator!"
 print(Fore.LIGHTGREEN_EX + introduction.center(30))
 
 def simple_calculator():
+    # To create new line
     print("\n")
     # Ask the user for the operation
-    operation = input(Fore.LIGHTWHITE_EX + "What operation do you want to perform? (+, -, *, /): ")
+    operation = input(Fore.LIGHTWHITE_EX + "What operation do you want to perform? [+ (addition), - (subtraction), * (multiplication), / (division)]: ")
     # Ask the user to input two numbers
     try:
         integer_1 = float(input(Fore.LIGHTCYAN_EX + "\nEnter first number: "))
         integer_2 = float(input(Fore.LIGHTCYAN_EX + "Enter second number: "))
     except ValueError:
-        print(Fore.LIGHTRED_EX + "\nError: Invalid number input")
+        print(Fore.LIGHTRED_EX + "\nError: Invalid input")
         print(Fore.LIGHTRED_EX + "\nTry Again!")
         return
     # If addition
@@ -54,7 +55,7 @@ def simple_calculator():
     # If invalid operation
     else:
         result = "Invalid Operation"
-        print(Fore.LIGHTRED_EX + f"\nError: {result}")
+        print(Fore.LIGHTRED_EX + "\nError: " + (result))
         print("\nTry Again")
 
     # Ask user if they want to continue in solving
