@@ -13,4 +13,6 @@ A python program that will create a simple calculator. This program will allow t
 # Program
 The program will look like this:
 
-![Screenshot 2023-05-12 124845](https://github.com/bhnblz/simple-calculator/assets/129713527/d5ed1597-6b45-4cd7-bdaf-f1a129086a13)
+![Screenshot 2023-05-12 131822](https://github.com/bhnblz/simple-calculator/assets/129713527/392400dc-6c87-4587-8863-d989f722f631)
+
+note: The program already has Python modules applied.
