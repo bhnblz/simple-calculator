@@ -3,11 +3,11 @@ from colorama import Fore
 
 import pyfiglet
 greetings = "Hello!"
-print(pyfiglet.figlet_format (greetings.center(60), font = "standard"))
+print(pyfiglet.figlet_format (greetings.center(85), font = "standard"))
 title = "THIS IS A SIMPLE CALCULATOR PROGRAM"
-print(Fore.LIGHTRED_EX + "=" * 80)
-print(Fore.LIGHTRED_EX + title.center(80))
-print("=" * 80)
+print(Fore.LIGHTRED_EX + "=" * 104)
+print(Fore.LIGHTRED_EX + title.center(104))
+print("=" * 104)
 print("\n")
 
 description = "The purpose of this program is to create a simple calculator that has four operations "
@@ -49,7 +49,7 @@ def simple_calculator():
             result = integer_1 / integer_2
             print("\nAnswer: " + str(float(result)))  
         except ZeroDivisionError:
-            print(Fore.LIGHTRED_EX + "\nError: Cannot divide by zero")
+            print(Fore.LIGHTRED_EX + "\nError: You cannot divide by zero")
             print(Fore.LIGHTRED_EX + "\nTry Again")
             return
     # If invalid operation
@@ -59,7 +59,7 @@ def simple_calculator():
         print("\nTry Again")
 
     # Ask user if they want to continue in solving
-    solve_again = input(Fore.LIGHTMAGENTA_EX + "\nDo you want to solve again? (y/n): ")
+    solve_again = input(Fore.LIGHTMAGENTA_EX + "\nDo you want to solve again? Type y if Yes and n if No: ")
     # If yes, continue solving
     if solve_again == "y":
         simple_calculator()    
