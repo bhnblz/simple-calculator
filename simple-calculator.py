@@ -1,3 +1,8 @@
+import colorama
+from colorama import Fore
+
+import pyfiglet
+
 def simple_calculator():
     print("\n")
     while True:
@@ -44,7 +49,7 @@ def simple_calculator():
             simple_calculator() 
         # If no, exit the program
         elif solve_again == "n":
-            print("Thank you! See you later.")
+            print("Thank you!")
             exit()
 
 # Call the function
